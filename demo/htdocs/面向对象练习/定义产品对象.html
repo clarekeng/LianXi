@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>产品对象</title>
+</head>
+<body>
+<h2 id="title">名称</h1>
+<h3 id="des">产品描述</h3>
+<div id="price">价格</div>
+<script>
+	function Product(){
+		this.title = 'iphone';
+		this.price = 6700;
+		this.images = [];
+		this.description = '手机霸主'
+
+	}
+Product.prototype={
+	buy:function(){
+
+	},
+	getDetail:function(){
+ 
+	},
+	bindDOM:function(){
+
+	},
+	bindEvents:function(){
+
+	}
+}
+
+
+
+	window.onload=function(){
+		var iphone32 = new Product()
+		iphone32.title = 'apple 玫瑰金色';
+		iphone32.price = 4988;
+		var title = document.getElementById('title')
+		title.innerHTML=iphone32.title;
+		var price = document.getElementById('price')
+		price.innerHTML = iphone32.price;
+	}
+</script>
+</body>
+</html>

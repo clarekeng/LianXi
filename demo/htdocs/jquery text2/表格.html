@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表格</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<script>
+		$(function(){
+			//假设从后台获取的
+			var data =[{
+				name:'传智',
+				URL:'http://www.baidu.com',
+				type:'培训机构'
+			},{
+				name:'2传智',
+				URL:'2http://www.baidu.com',
+				type:'2培训机构'
+			},{
+				name:'3传智',
+				URL:'3http://www.baidu.com',
+				type:'3培训机构'
+			}];
+			var strHTML = '';
+			for (var i = 0; i < data.length; i++) {
+				var temp = data[i];
+				strHTML +='<tr>';
+				strHTML +='<td>'+temp.name+'</td>';
+				strHTML +='<td>'+temp.URL+'</td>';
+				strHTML +='<td>'+temp.type+'</td>';
+				strHTML +='</tr>';
+			}
+			$('#J_tb').html(strHTML);
+		});          
+	</script>
+	
+</head>
+<body> 
+<table>
+	<thead>
+		<tr>
+			<th>标题</th>
+			<th>URL</th>
+			<th>说明</th>
+		</tr>
+	</thead>
+	<tbody id="J_tb">
+				
+	</tbody>
+</table>
+
+
+</body>
+</html>

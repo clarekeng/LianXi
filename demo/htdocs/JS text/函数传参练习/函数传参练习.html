@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>函数传参</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<script type="text/javascript">
+		function tobianse(color)
+		{
+			var oBer=document.getElementById('booder1');
+			oBer.style.background=color;
+
+		}
+	</script>
+</head>
+<body>
+<input type="button" value="变绿" onclick="tobianse('green');">
+<input type="button" value="变黄" onclick="tobianse('yellow');">
+<input type="button" value="变红" onclick="tobianse('red');">
+<div id="booder1"></div>
+</body>
+</html>这是第一种 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>函数传参2</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<script type="text/javascript">
+		function tobianse(name,value)
+		{
+			var oBer=document.getElementById('booder1');
+			oBer.style[name]=value;
+		}
+	</script>
+</head>
+<body>
+<input type="button" value="变宽" onclick="tobianse('width','300px');">
+<input type="button" value="变高" onclick="tobianse('height','300px');">
+<input type="button" value="变红" onclick="tobianse('background','red');">
+<div id="booder1"></div>
+</body>
+</html>

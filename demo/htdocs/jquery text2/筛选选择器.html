@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>筛选选择器</title>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	//$('span').eq(1)//第2个姐妹
+	//$('span').first()//第1个姐妹
+	//$('span').parent()//所有span元素的父元素。
+	//$('#span1').siblings()//id是#span1的所有span姐妹除了自己。
+	//$('#span1').find()//id是#span1的所有后代元素。
+
+
+
+	//$('span').last()//最后1个姐妹
+	//$('span').odd//奇数姐妹
+	//$('span:even')//偶数姐妹
+	//$('span:lt(6)').css('color','red');//小于7姐妹就是1-6
+	$('span:gt(6)').css('color','red');//大于7姐妹就是8
+});
+</script>
+<div class="div1">
+	<span id="span1">1</span>
+	<span>2</span>
+	<span>3</span>
+
+</div>
+</body>
+</html>

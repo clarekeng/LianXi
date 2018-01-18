@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+	var oDiv;
+	window.onload=function ()
+	{
+		oDiv=document.getElementById('header');
+	}
+
+	function width1()
+	{
+		oDiv.style.width=200+'px';
+	}
+
+	function height1()
+	{
+		oDiv.style.height=200+'px';
+	}
+	</script>
+</head>
+<body>
+<div id="header" style="width: 100px; height: 100px; background:red;" ></div>
+<input type="button" value="宽" onclick="width1()">
+<input type="button" value="高" onclick="height1()">
+</body>
+</html>

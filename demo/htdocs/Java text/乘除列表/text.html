@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>乘除列表</title>
+	<style type="text/css">
+		body #tab div ul li{
+			margin: 0px;
+			padding: 0px;
+			font-family: 16px;
+
+		}
+		#tab{
+			width: 900px;
+			height: 900px;
+			border: 2px solid pink;
+		}
+		.c1{
+			background-color: red;
+		}
+		.c2{
+			background-color: skyblue;
+		}
+		.c3{
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body >
+<div id="tab"></div>
+</body>
+<script type="text/javascript">
+	var oTab=document.getElementById("tab");
+	var str="";
+	str+="<ul>";
+		for(var i=0;i<9;i++){
+			var val="c1";
+			switch(i%3){
+				case 0;
+				val="c1";
+				break;
+				case 1;
+				val="c2";
+				break;
+				default:
+				val="c3";
+			}
+		}
+	str+="</ul>";
+</script>
+</html>

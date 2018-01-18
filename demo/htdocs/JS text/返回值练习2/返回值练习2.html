@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>返回值练习2</title>
+<script type="text/javascript">
+
+
+function css()
+{
+	return arguments[0].style[arguments[1]]
+}
+
+function kuan() {
+	var div1 = document.getElementById("div1")
+	alert (css(div1,"width"))
+}
+
+function gao() {
+	var div1 = document.getElementById("div1")
+	alert(css(div1,"height"))
+}
+
+
+</script>
+
+</head>
+<body>
+<div id="div1" style="width: 200px; height: 200px; background: red;"></div>
+
+<input type="button" value="宽" onclick="kuan()">
+<input type="button" value="高" onclick="gao()">
+</body>
+</html>

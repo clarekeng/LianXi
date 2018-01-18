@@ -1,0 +1,58 @@
+ <html>  
+  <head>  
+ <script type="text/javascript" src="angular.min.js"></script>
+ <script type="text/javascript">  
+ function windowScopedFilter (input) {  
+      var output = [];  
+      angular.forEach(input, function(v,k){  
+           if (v.phone.contains("555")) {  
+                output.push(v);  
+           }  
+      });  
+      return output;       
+ }  
+ var myapp = angular.module('MyFilterApp', []);  
+ myapp.filter('myfilter', function() {  
+   return function(input, param1) {  
+      console.log("------------------------------------------------- begin dump of custom parameters");  
+      console.log("input=",input);  
+      console.log("param1(string)=", param1);  
+      var args = Array.prototype.slice.call(arguments);  
+      console.log("arguments=", args.length);  
+      if (3<=args.length) {  
+           console.log("param2(string)=", args[2]);  
+      }  
+      if (4<=args.length) {  
+           console.log("param3(bool)=", args[3]);  
+      }  
+      console.log("------------------------------------------------- end dump of custom parameters");  
+      // filter  
+      if (5<=args.length) {  
+           return window[args[4]](input);  
+      }  
+      return input;  
+   };  
+ });  
+ myapp.controller('MyFilterController', ['$scope', function($scope) {  
+   $scope.friends = [{name:'John', phone:'555-1276'},  
+                      {name:'Annie', phone:'800-BIG-MARY'},  
+                      {name:'Mike', phone:'555-4321'},  
+                      {name:'Adam', phone:'555-5678'},  
+                      {name:'David', phone:'555-8765'},  
+                      {name:'Mikay', phone:'555-5678'}];  
+ }]);  
+ </script>  
+ </head>  
+ <body ng-app="MyFilterApp">  
+ <div ng-controller="MyFilterController">  
+      <table id="searchTextResults">  
+       <tr><th>Name</th><th>Phone</th></tr>  
+       <tr ng-repeat="friend in friends |myfilter:'param1':'param2':true:'windowScopedFilter'">  
+        <td>{{friend.name}}</td>  
+        <td>{{friend.phone}}</td>  
+       </tr>  
+      </table>  
+ </div>  
+ <hr>  
+ </body>  
+ </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formateString</title>
+	<script src=js2/jquery-2.2.4.js></script>
+</head>
+<body>
+<span id="span">ddsdsdasa</span>
+<p>wwww</p>
+<script>
+function product(){
+
+}
+product.prototype={
+	 formateString:function(str,data){
+		return str.replace(/#\((\w+)\)/g,function(match,key){
+			return data[key]});
+	}
+}
+	var Product = new product()
+	var str = {name:'keke'}
+	var sPan = document.getElementById('span')
+	sPan.innerHTML = Product.formateString('欢迎#(name)',str)
+	$('p').html('欢迎'+str.name)
+</script>
+</body>
+</html>

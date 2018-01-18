@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template</title>
+	<script src=js2/jquery-2.2.4.js></script>
+	<script src=art-template-master/lib/template-web.js></script>
+
+</head>
+<body>
+<h1>最新电影</h1>
+<div id="mydiv"></div>
+<script id="main_panel_big_sale_template" type='text\html'>
+<h2>{{title}}</h2>
+	
+	{{each films}}	
+		<li>
+			<p>电影：{{$value.name}}</p>
+			<p>导演：{{$value.lead}}</p>
+			<p>主演：{{$value.role}}</p>
+		</li>
+	{{/each}}
+	
+</script>
+<script>
+	var data = {
+		title:'电影列表',
+		films:
+		[
+			{
+				name:'美人鱼',
+				lead:'周星驰',
+				role:'邓超'
+			},
+			{
+				name:'美人鱼1',
+				lead:'周星驰1',
+				role:'邓超1'
+			},
+			{
+				name:'美人鱼2',
+				lead:'周星驰2',
+				role:'邓超2'
+			}
+		]
+	}
+	
+	
+	
+	var html = template('main_panel_big_sale_template',data);
+	document.getElementById('mydiv').innerHTML = html
+</script>
+</body>
+</html>

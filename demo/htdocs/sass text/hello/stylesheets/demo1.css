@@ -1,0 +1,11 @@
+/* line 6, ../sass/demo1.scss */
+body { background: red; font: 12px; color: yellow; }
+
+/* line 12, ../sass/demo1.scss */
+div { color: yellow; font-size: 14px; padding-left: 1px; }
+
+/* line 17, ../sass/demo1.scss */
+p { color: #fff; border: 1px solid blue; }
+
+/* line 21, ../sass/demo1.scss */
+.container { width: 50px; height: 50px; }

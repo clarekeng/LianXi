@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>产品</title>
+</head>
+<body>
+<div id="container">
+	<h2>名称</h2>
+	<p>折扣</p>
+	<span>价格</span>
+
+</div>
+<script>
+	function product(){
+		this.title = '兰蔻';
+		this.zhekou = '5.1';
+		this.price = 0;
+
+	}
+product.prototype={
+	bindDOM:function(){
+		var str = '';
+		str+='<h2>'+this.title+'</h2>'
+		str+='<p>'+this.zhekou+'</p>'
+		str+='<span>'+this.price+'</span>'
+		return str;
+	}
+}
+window.onload = function(){
+
+	var product1 = new product()
+		product1.title = '兰蔻';
+		product1.zhekou = '5.1';
+		product1.price = 200;
+
+	var product2 = new product()
+		product2.title = '雪佛兰';
+		product2.zhekou = '5.2';
+		product2.price = 300;
+
+	var product3 = new product()
+		product3.title = '倩碧';
+		product3.zhekou = '5.3';
+		product3.price = 400;
+
+	var product4 = new product()
+		product4.title = '香奈儿';
+		product4.zhekou = '5.4';
+		product4.price = 500;
+
+	var products = [product1,product2,product3,product4];
+	var str = '';
+	for(var i=0;i<products.length;i++){
+		str+=products[i].bindDOM();
+	}
+	var container = document.getElementById('container');
+	container.innerHTML = str;
+
+
+}
+</script>
+</body>
+</html>

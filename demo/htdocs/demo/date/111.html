@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style>
+		*{
+  margin:0;
+  padding:0;
+  font-size:16px;
+}
+.hide{
+  display:none;
+}
+
+.div-back{
+  height:1200px;
+  width:100%;
+  background-color:#add8e6;
+  li{
+    font-size:5rem;
+  }
+  #btn-pop{
+        width:60px;
+        height:30px;
+        background-color:#eee;
+        text-align:center;
+        line-height:30px;
+  }
+}
+
+.pop-window{
+  position:absolute;
+  background-color:rgba(0,0,0,0.5); 
+  width:100%;
+  height:100%;
+  .pop-container{
+    position:fixed;
+    border-radius:10px;
+    padding:2rem;
+    width:80%;
+    left:10%;
+    background-color:#5f9ea0;
+    .footer{
+      .pop-close{
+        margin:2rem auto;
+        width:60px;
+        height:30px;
+        background-color:#eee;
+        text-align:center;
+        line-height:30px;
+      }
+    }
+  }
+  
+}
+	</style>
+<body>
+<div class="pop-window hide">
+  <div class="pop-container">
+     <ul>
+        <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+       <li>this is the very long long content of pop window.</li>
+    </ul>
+    <div class="footer">
+      <div class="pop-close" id="pop_close" onclick="close_window();">close</div>
+    </div>
+    
+  </div>
+</div>
+<div class="div-back">
+  <div id="btn-pop" onclick="pop_window();">pop</div>
+  <ul>
+    <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+     <li>this is the very long long content.</li>
+  </ul>
+</div>
+<script>
+	var $=function(selector){
+  return document.querySelector(selector);
+}
+function pop_window(){
+   $('.pop-window').style.display = "block";
+//   calculate lengh of top.
+  var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+  var h_pop = $('.pop-container').offsetHeight;
+  var topval = (h-h_pop)/2;
+  $('.pop-container').style.top=topval +"px";
+//   stop scroll of back layer.
+  $('html').style.overflow="hidden";
+  $('body').style.overfolw="hidden";
+}
+function close_window(){
+  $('.pop-window').style.display="none";
+  $('html').style.overflow="auto";
+  $('body').style.overflow="auto";
+}
+</script>
+	
+</body>
+</html>

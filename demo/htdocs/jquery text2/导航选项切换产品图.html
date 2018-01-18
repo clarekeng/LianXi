@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导航选项切换产品图</title>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<style>
+	.tab{
+		height: 30px;
+	}
+	.tab li{
+		float: left;
+		list-style: none;
+		text-align: center;
+		width: 60px;
+		border: 1px solid #fff;
+		background-color: pink;
+	}
+	.active{
+		background-color: skyblue;
+	}
+	
+	.main{
+		width: 200px;
+		height: 200px;
+		background: #ccc;
+		display: none;
+	}
+	.selected{
+		display:block;
+	}
+
+</style>
+<script>
+	$(document).ready(function(){
+		alert("www")
+		$('.tab>li').mouseenter(function() {
+					$(this).addClass('active')
+					.siblings().removeClass('active');
+					//给当前导航添加active这个样式，其他姐妹删除active这个样式
+					var index=$(this).index();
+					//提取当前的序号
+					$('.main').eq(index).addClass('selected')
+					.siblings().removeClass('selected');
+					//同步序号给当前div添加active这个样式，其他姐妹div删除active这个样式
+				});
+				
+		});
+</script>
+</head>
+
+<body>
+
+<div class="tab">
+	<li class="active">1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+</div>
+<div class="main selected">01</div>
+<div class="main">02</div>
+<div class="main">03</div>
+<div class="main">04</div>
+</body>
+</html>

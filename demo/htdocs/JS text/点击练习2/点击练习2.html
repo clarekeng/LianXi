@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点击练习2</title>
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0px;
+			color: 	#4F4F4F;
+			font-family: "微软雅黑";
+		}
+		body{
+			background-color: #272727;
+		}
+		.header{
+			margin-top: 150px;
+			box-sizing: border-box;
+			width: 600px;
+			height: 600px;
+			background-color: #ccc;
+			border: 5px solid;
+			border-color: rgba(255,255,255,0.5);
+			}
+		h1 input{
+			border: 2px solid 
+			line-height: 20px;
+			width: 60px;
+		}
+		div #center{
+			margin-top: 50px;
+			width: 400px;
+			height: 400px;
+			background-color: white;
+			margin-bottom: 15px;
+			position: relative;
+		}
+		#fooder{
+			display: none;
+			box-sizing: border-box;
+			width: 306px;
+			border: 3px solid;
+			position: absolute;
+			top: 780px;
+			left: 50%;
+			margin-left: -150px;
+		}	
+		#fooder div {
+			line-height: 50px;
+			text-align: center;
+			box-sizing: border-box;
+			width: 300px;
+			height: 50px;
+			border: 1px solid;
+			border-color: rgba(255,255,255,0.4);
+		}
+		
+		#fooder input{
+			color: black;
+			width: 50px;
+		}
+		.fooderbottom input{
+			margin: 0 auto;
+			width: 70px;
+			height: 48px;
+			font-size: 22px;
+			font-weight: bolder;
+			background-color: #ccc;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function style1() {
+			document.getElementById("fooder").style.display ="block";
+		}
+		function color1() {
+			document.getElementById("center").style.backgroundColor ="pink";
+		}
+		function aixuexi() {
+			document.getElementById("CR").style.backgroundColor ="pink";
+		}
+		function xuexi() {
+			document.getElementById("CR").style.backgroundColor ="#ccc";
+		}
+		function color2() {
+			document.getElementById("center").style.backgroundColor ="skyblue";
+		}
+		function aixuexi1() {
+			document.getElementById("CS").style.backgroundColor ="skyblue";
+		}
+		function xuexi1() {
+			document.getElementById("CS").style.backgroundColor ="#ccc";
+		}
+		function color3() {
+			document.getElementById("center").style.backgroundColor ="purple";
+		}
+		function aixuexi2() {
+			document.getElementById("CP").style.backgroundColor ="purple";
+		}
+		function xuexi2() {
+			document.getElementById("CP").style.backgroundColor ="#ccc";
+		}
+		function width1() {
+			document.getElementById("center").style.width ="200px";
+		}
+		function width2() {
+			document.getElementById("center").style.width ="300px";
+		}
+		function width3() {
+			document.getElementById("center").style.width ="400px";
+		}
+		function height1() {
+			document.getElementById("center").style.height ="200px";
+		}
+		function height2() {
+			document.getElementById("center").style.height ="300px";
+		}
+		function height3() {
+			document.getElementById("center").style.height ="400px";
+		}
+		function huifu() {
+			document.getElementById("center").style.height ="400px";
+			document.getElementById("center").style.width ="400px";
+			document.getElementById("center").style.backgroundColor ="white";
+		}
+		function queding() {
+			document.getElementById("fooder").style.display ="none";
+		}
+
+	</script>
+</head>
+<body>
+<div class="header">
+	<h1>请为下面的DIV设置样式：<span><input type="button" value="点击设置" onclick="style1()"></span></h1>
+	<div id="center"></div>
+	<div id="fooder">
+		<div class="color">
+		请选择背景色：<input type="button" value="粉色" onclick="color1()" id="CR" onmouseover="aixuexi();" onmouseout="xuexi();">
+					  <input type="button" value="蓝色" onclick="color2()" id="CS" onmouseover="aixuexi1();" onmouseout="xuexi1();">
+					  <input type="button" value="紫色" onclick="color3()" id="CP" onmouseover="aixuexi2();" onmouseout="xuexi2();">
+		</div>
+		<div class="width">
+	    请选择宽(px)：<input type="button" value="200" onclick="width1()">
+					  <input type="button" value="300" onclick="width2()">
+					  <input type="button" value="400" onclick="width3()">
+		</div>
+		<div class="height">
+		请选择高(px)：<input type="button" value="200" onclick="height1()">
+					  <input type="button" value="300" onclick="height2()">
+					  <input type="button" value="400" onclick="height3()">
+		</div>
+		<div class="fooderbottom">
+		<input type="button" value="恢复" class="huifu" onclick="huifu()">
+		<input type="button" value="确定" class="queding" onclick="queding()">
+		</div>
+	</div>
+</div>
+</body>
+</html>

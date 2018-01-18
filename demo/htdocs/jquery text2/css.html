@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css</title>
+	<style>
+		li{
+			font-size: 12px;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('li').css("font-size",function(index,value){
+				//1   index:当前元素索引号，指从 li[0]开始
+				//value:当前元素要设置的样式，指font-size的初始值px为12
+				//return (index+1)*10+'px';
+				//2   parseInt() 函数可解析一个字符串，并返回一个整数
+				//return (index+1)*parseInt(value)+'px';
+				//3   只设置第三个
+				console.log(parseInt(value));
+				if(index===2){
+				return (index+1)*parseInt(value)+'px';
+
+				}
+
+				
+			})
+
+		}); 
+	</script>
+</head>
+<body>
+<ul>
+	<li>我是li元素1</li>
+	<li>我是li元素2</li>
+	<li>我是li元素3</li>
+	<li>我是li元素4</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>点击练习1</title>
+ 	<meta charset="utf-8">
+ 	<style type="text/css">
+ 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+ 		.boder1{
+ 			box-sizing: border-box;
+ 			margin: 0 auto;
+ 			width: 557px;
+ 			height: 626px;
+ 			border: 1px solid black;
+ 			margin-top: 123px;
+ 			position: relative;
+
+		}
+		.boder1 #title{
+			width: 557px;
+			display: inline-block;
+			background-color: pink;
+			line-height: 70px;
+			font-size: 28px;
+			font-weight: bolder;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+		}
+		.boder1 #title a{
+			margin: 0 auto;
+		}
+		.boder2{
+			width: 277px;
+			height: 277px;
+			background-color: pink;
+			border: 1px solid black;
+			margin: 0 auto;
+			margin-top: 142px;
+		}
+		.boder2 h1{
+			text-align: center;
+			line-height: 277px;
+			color: white;
+			font-size: 60px;
+		}
+		.right{
+			display: none;
+			box-sizing: border-box;
+			padding: 14px;
+			width: 200px;
+			height: 420px;
+			border: 1px solid #ccc;
+			position: absolute;
+			right: -202px;
+			top: 0px;
+		}
+		.boder1 .right p{
+			line-height: 20px;
+			text-align: left;
+			font-size: 18px;
+			background-color: white;
+			color: black;
+			margin-top: 10px;
+			font-weight: bold;
+		}
+		.red{
+			background-color:red;
+		}
+		.yellow{
+			background-color:yellow;
+		}
+		.blue{
+			background-color: blue;
+		}
+
+		span input{
+			display: inline-block;
+
+			width: 46px;
+			font-size: 19px;
+			font-weight: bold;
+			line-height: 46px;
+			text-align: center;
+			margin-top: 20px;
+			background-color: #ccc; 
+		}
+		.rightbot{
+			margin-left: 12px;
+		}
+		.rightbot input{
+			width: 65px;
+			background-color: black;
+			color: white;
+
+		}
+
+
+ 	</style>
+ 	<script type="text/javascript">
+ 		function title_click() {
+ 			document.getElementById("right").style.display="block";
+		}
+		function red1() {
+			document.getElementById("boder2").style.backgroundColor="red";
+			// body...
+		}
+		function yellow1() {
+			document.getElementById("boder2").style.backgroundColor="yellow";
+		}
+		function blue1() {
+			document.getElementById("boder2").style.backgroundColor="blue";
+		}
+		function width11() {
+			document.getElementById("boder2").style.width = "100px";
+		}
+		function width21() {
+			document.getElementById("boder2").style.width = "200px";
+		}
+		function width31() {
+			document.getElementById("boder2").style.width = "300px";
+		}
+		function height11() {
+			document.getElementById("boder2").style.height = "100px";
+		}
+		function height21() {
+			document.getElementById("boder2").style.height = "200px";
+		}
+		function height31() {
+			document.getElementById("boder2").style.height = "300px";
+		}
+		function huifu() {
+			document.getElementById("boder2").style.height = "277px";
+			document.getElementById("boder2").style.width = "277px";
+			document.getElementById("boder2").style.backgroundColor = "pink";
+			document.getElementById("right").style.display = "none";
+		}
+		function queren() {
+			document.getElementById("right").style.display = "none";
+ 	</script>
+ </head>
+ <body>
+ <div class="boder1">
+ 	<p><a href="#" id="title" onclick="title_click()">点击设置样式</a></p>
+ 	<div class="boder2" id="boder2">
+ 		<div id="white"><h1>大白鼠</h1></div>
+ 
+	</div>
+	 <div class="right" id="right" >
+	 	<p>选择背景</p>
+	 	<span>
+		 	<input type="button" value="红" class="red" onclick="red1()">
+		 	<input type="button" value="黄" class="yellow" onclick="yellow1()">
+		 	<input type="button" value="蓝" class="blue" onclick="blue1()">
+	 	</span>
+	 	<p>选择宽度</p>
+	 	<span>
+		 	<input type="button" value="100" class="width1" onclick="width11()">
+		 	<input type="button" value="200" class="width2" onclick="width21()">
+		 	<input type="button" value="300" class="width3" onclick="width31()">
+	 	</span>
+	 	<p>选择高度</p>
+	 	<span>
+		 	<input type="button" value="100" class="height1" onclick="height11()">
+		 	<input type="button" value="200" class="height2" onclick="height21()">
+		 	<input type="button" value="300" class="height3" onclick="height31()">
+	 	</span>
+	 	<div>
+	 	<span class="rightbot">
+		 	<input type="button" value="恢复" onclick="huifu()">
+		 	<input type="button" value="确定" onclick="queren()">
+	 	</span>
+	 	</div>
+ 	</div>
+ </div>
+ </body>
+ </html>

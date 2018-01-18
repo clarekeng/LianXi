@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>固定导航栏前面还有div案例</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		div{
+			text-align: center;
+		}
+		.div1{
+			width: 100%;
+			height: 150px;
+			background-color: pink;
+
+		}
+		.div2{
+			width: 100%;
+			height: 100px;
+			background: #666;
+
+		}
+		.div3{
+			width: 100%;
+			margin-top: 50px;
+			height: 3000px;
+			background: #ccc;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<script>
+		$(function(){
+			var topHeight=$('.div1').height();
+			$(window).scroll(function(){
+				var docscrollTop=$(document).scrollTop();
+				if (docscrollTop >= topHeight) {
+					$('.div2').css({
+						'position': 'fixed',
+						'top':0
+					});
+					$('.div3').css({
+						'margin-top': $('.div2').height(),
+						
+					});
+
+
+				}else{
+					$('.div2').css({
+						'position': 'static',
+						
+					});
+					$('.div3').css({
+						'margin-top': '50px',
+						
+					});
+				}
+
+			})
+		});
+	</script>
+</head>
+<body>
+<div class="div1">1</div>
+<div class="div2">2</div>
+<div class="div3">3</div>
+</body>
+</html>

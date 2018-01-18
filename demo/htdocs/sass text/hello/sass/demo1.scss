@@ -1,0 +1,24 @@
+$fontSize:14px;
+$fontSize:15px !default;
+$paddings:1px 2px 3px 4px;
+$map:(color:#fff,borderColor:blue);
+$className:container;
+body{
+	background:red;
+	font:12px;
+	$color:yellow !global;
+	color:$color;
+}
+div{
+	color:$color;
+	font-size:$fontSize;
+	padding-left:nth($paddings,1);
+}
+p{
+	color:map-get($map,color);
+	border:1px solid map-get($map,borderColor);
+}
+.#{$className}{
+	width: 50px;
+	height: 50px;
+}

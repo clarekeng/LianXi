@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue.js</title>
+	<script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{message}}
+	</div>
+	<script type="text/javascript">
+		"use strict";//严格模式
+		let vm = new Vue({
+			el:"#app",
+			data:{
+				message:"你好，世界！"
+			}
+		})
+	</script>
+
+</body>
+</html>

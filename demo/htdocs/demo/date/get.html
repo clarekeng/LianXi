@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>异步访问</title>
+</head>
+<body>
+	<div id="result" style="border: 1px solid red;width: 200px;height: 200px;"></div>
+	<button>Click me</button>
+	<input type="button" id="btn" value="点击">
+
+</body>
+	<script src="js/jquery-2.2.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").on('click',function(){
+				var ajax_load = "<img src='img/weather.png' alt='loading...'/>";
+				var loadUrl = "api";
+				$("#result").html(ajax_load).load(loadUrl);
+				$("#result").html(ajax_load).load(loadUrl,null,function(){
+					alert($("#result").html());
+				})
+				$.get("api",{action:"get",name:"keke"},function(data,textStatus){
+					alert(data);
+				});
+				$.ajax({
+					url:"api",
+					data:{id:123},
+					type:"POST",
+					dataType:"json",
+					succes:function(json){
+					$("<h1/>").text(json.title).sppendTo("body");
+					$("<div class=\"content\"/>").html(json.html).appendTo("body");
+					},
+					error:function(xhr,status,errorThrown){
+						document.write("Sorry,there was a problem!");
+						console.log("Error:" + errorThrown);
+						console.log("Status:" + status);
+						console.dir(xhr);
+					},
+					complete:function(xhr,status){
+							document.write("The request is complete!");
+					}
+					
+					
+				});
+			});
+		});
+		var sum = 0;
+		for (var i = 0; i <=100; i+=2) {
+			document.write(i+"</br>");
+			if (i==44) {
+				break;
+			}
+		}
+		for (var i = 0; i < 3; i++) {
+			document.write("<input type='text'>");
+			for (var j = 0; j < 10; j++) {
+				document.write(j+"<br>")
+				if (j==6) {
+					break;
+				} 
+			}
+		}
+		document.write("<table>");
+		for (var i = 1; i <= 9; i++) {
+			document.write("<tr>");
+			for (var j = 1; j <= i; j++) {
+				document.write('<td>' + i +'X' +j +'='+ (i*j) + '</td>');
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+
+  		document.write("<br>");
+
+  		document.write("<table>")
+  		for (var i = 9; i >=1; i--) {
+  			document.write("<tr>");
+  			for (var j = 1; j <=i; j++) {
+  				document.write('<td>' + i + "x" + j + "=" + (i*j) +"</td>");
+  			}
+  			document.write("</tr>");
+  		}
+  		document.write("</table>")
+  		document.write("<br>");
+  		document.write("100元买100只鸡公鸡5元，母鸡3元，小鸡1元3只。");
+  		
+  		for (var i = 0; i <= 20; i++) {
+  			for (var j = 0; j <= 33; j++) {
+  				z=100 - i -j;
+  				if ((z%3==0)&&(5*i+3*j+z/3==100)) {
+  					document.write('公鸡：'+i +'母鸡：'+j+'小鸡：'+z+'<hr>');
+  				}
+  			}
+  		}
+  		document.write("<br>");
+  		for (var i = 0; i <=20; i++) {
+  			for (var j = 0; j <=33; j++) {
+  				for (var z = 0; z <=100; z++) {
+  					if ((i+j+z==100)&&(5*i+3*j+z/3==100)){
+  						document.write('公鸡：'+i +'母鸡：'+j+'小鸡：'+z+'<hr>');
+  					}
+  				}
+  			}
+  		}
+  		 function foo() {
+  		 	var j = arguments.length;
+  		 	var num = 0;
+  		 	for(var i=0;i<j;i++){
+  		 		sum+=arguments[i];
+  		 	}
+  		 	return sum;
+        
+
+         
+    }
+    document.write(foo(1,2,3,4,5,6));
+
+    function ojj() {
+    	var j = arguments.length;
+    	var num = 0;
+    	for (var i = 0; i <=j-1; i++) {
+    		if (arguments[i]>num) {
+    			num=arguments[i];
+    		}
+    	}
+    	return num;
+    }
+    document.write(ojj(22222,33333,555555,99999));
+    document.write("<hr>");
+    // var x = 1;
+    // function text(){
+    // 	document.write('函数体内X的值'+x+'<hr/>');
+    // 	x = 19;
+    // 	document.write('函数体内X的值重新赋值19'+x+'<hr/>');
+
+    // }
+    // document.write('函数体外X的值'+x+'<hr/>');
+    // text();
+    // document.write('x的值为'+x+'<hr/>');
+    var x = 1,y = 2;
+    function calc(x,y){
+    	document.write('a的值为'+a+'<br>');
+    	document.write('函数体内x的值为'+x+'<br>');
+    	document.write('函数体内y的值为'+y+'<br>');
+    	this.x = 2, this.y = 6;
+    	s = x+y;
+    	x = x+y;
+    	var a=198;
+    	document.write('a的值为'+a+'<br>');
+    	document.write('x的值为'+x+'<br>');
+    	return s;
+	}
+	
+	document.write('calc'+calc(5,5));
+	document.write("<hr>");
+	document.write('s'+s+"<hr>");
+	document.write("<hr>");
+	var j ="我是妹子";
+	function func(){
+		var j;
+		document.write(j);
+		j = '我不是妹子';
+		document.write(j);
+	};
+	func();
+	var a1 = 340;
+	var a1 = 'www';
+	document.write(isNaN(a1));
+	function cheng2(a,b,c){
+		var arr=[];
+		for (var i = 0; i < 3; i++) {
+			arr[i]=arguments[i]*2;
+
+		}
+		return arr;
+	}
+	function jia1(a){
+		return a+1;
+	}
+	
+	document.write(cheng2(10,20,30));
+	document.write("<hr>");
+
+	// var obj4 =new Test();
+	function Test1(num1,num2){
+		this.n1=num1;
+		this.n2=num2;
+	};
+	var obj5=new Test1(5,6);
+	document.write(typeof obj5); 
+	res1=/is/i.exec('thois is a is test');
+	console.log(res1);
+	var handler=function(e){
+		switch(e.type) {
+			case 'click':
+				alert('click');
+				break;
+			case 'mouseover':
+				alert('mouseover');
+				break;
+			case 'mouseout':
+				alert('mouseout');
+				break;
+		}
+	};
+	$('#btn').on('click',handler);
+	// $('#btn').on('mouseover',handler);
+	// $('#btn').on('mouseout',handler);
+	
+
+	
+	</script>
+
+</html>

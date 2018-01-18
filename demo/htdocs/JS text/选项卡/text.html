@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		/*.aaa{
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			z-index: 2;
+			display: block;
+			width: 500px;
+			height: 20px;
+			background: rgba(255,255,255,0.4);
+
+		}
+		.div1{
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			position: relative;
+		}
+		img{
+			width: 500px;
+			height: 500px;
+			
+
+		}
+		.btn2{
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}
+		.btn1{
+			position: absolute;
+			bottom: 5px;
+			right: 30px;
+		}*/
+		.btn{
+			position: relative;
+
+		}
+		.div-1{
+			width: 50px;
+			height: 50px;
+			background: pink;
+			display: none;
+			position: absolute;
+			top: 40px;
+			left: 8px;
+		}
+	</style>
+</head>
+<body>
+<!-- <div class="aaa">
+	<span>希望本文所述对大家的javascript程序设计有所帮助。</span>
+</div>
+<div class="div1" id="div_1">
+	<img id="img_1" src="./img/timg.jpg" alt="">
+	<input type="button" class="btn1" id="btn_1" value="1">
+	<input type="button" class="btn2" id="btn_2" value="2">
+</div>
+<div class="div1" id="div_1">
+	<img id="img_1" src="./img/timg.jpg" alt="">
+	<input type="button" class="btn1" id="btn_1" value="1">
+	<input type="button" class="btn2" id="btn_2" value="2">
+</div>
+<div class="div1" id="div_1">
+	<img id="img_1" src="./img/timg.jpg" alt="">
+	<input type="button" class="btn1" id="btn_1" value="1">
+	<input type="button" class="btn2" id="btn_2" value="2">
+</div> -->
+<div class="btn">
+	<button id="btn1">1</button>
+	<button id="btn2">2</button>
+	<button id="btn3">3</button>
+	<button id="btn4">4</button>
+</div>
+<div id="div1" class="div-1">1</div>
+<div id="div2" class="div-1">2</div>
+<div id="div3" class="div-1">3</div>
+<div id="div4" class="div-1">4</div>
+<script>
+	// var btn1 = document.getElementById("btn_1");
+	// var btn2 = document.getElementById("btn_2");
+	// var iMg = document.getElementById("img_1");
+	// btn1.onclick = function(){
+	// 	iMg.src = "img/学习 (2).png";
+	// }
+	// btn2.onclick = function(){
+	// 	iMg.src = "img/timg.jpg";
+	// }
+	function show(btn,Div){
+		var bt = document.getElementById(btn);
+		var Di = document.getElementById(Div);
+		bt.onclick = function (){
+			Di.style.display = "block";
+		
+ 		}
+ 		
+ 	}
+ 	show("btn1","div1");
+ 	show("btn2","div2");
+ 	show("btn3","div3");
+ 	show("btn4","div4");
+</script>
+</body>
+</html>

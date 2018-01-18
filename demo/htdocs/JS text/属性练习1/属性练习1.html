@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>属性练习1</title>
+	<style type="text/css">
+		.red{
+			width: 300px;
+			background-color: red;
+			border: 2px solid black;
+		}
+		.yellow{
+			width: 400px;
+			background-color: yellow;
+			border: 5px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function (){
+			var IN=document.getElementById('IN');
+			var TX=document.getElementById("text1"); 
+			var BU=document.getElementById("button1");
+			var img1=document.getElementById("imgs");
+			var OP=document.getElementById("P1");
+			IN.onclick=function (){
+				alert(TX.value);
+			};
+			IN.onclick=function (){
+				alert(TX.value +"在"+BU.value)
+			};
+			IN.onclick=function (){
+				// TX.value="button"
+				TX.value=BU.value
+			};
+			IN.onclick=function (){
+				img1.src=TX.value;
+			};
+			IN.onclick=function (){
+				OP.innerHTML=TX.value;
+				TX.value="";
+			};
+			var J1=document.getElementById("jian");
+			var J2=document.getElementById("jia");
+			var OP1=document.getElementById("P11");
+			var num=15;
+			J2.onclick=function (){
+				num ++;
+				OP1.style.fontSize = num +"px";
+			};
+			J1.onclick=function (){
+				num --;
+				OP1.style.fontSize = num +"px";
+			
+			};
+			var OP3=document.getElementById("red1");
+			var OP4=document.getElementById("yellow1");
+			OP3.onclick=function (){
+				P11.className="red";
+			}
+			OP4.onclick=function (){
+				P11.className="yellow";
+			}
+
+		};
+	</script>
+</head>
+<body>
+<input type="button" value="点我" id="IN"  />
+<input type="text" id="text1" />
+<select id="button1">
+	<option value="上海">上海</option>
+	<option value="北京">北京</option>
+	<option value="深圳">深圳</option>
+</select>
+<img src="1.png" width="300px" id="imgs" />
+<p id="P1">小胖胖</p>
+<input type="button" value="_" id="jian">
+<input type="button" value="+" id="jia">
+<input type="button" value="red" id="red1">
+<input type="button" value="yellow" id="yellow1">
+<p id="P11" >onload 事件 事件对象 实例 当页面载入完毕后执行Javascript代码</p>
+
+</body>
+</html>

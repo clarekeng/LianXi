@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网易注册</title>
+	<style type="text/css">
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		.wy{
+			margin: 0 auto;
+			width: 960px;
+			background-color: #F9F9F9;
+			border: 0px;
+			overflow: hidden;
+			font-family: "微软雅黑"；
+		}	
+		.header{
+			box-sizing: border-box;
+			line-height: 78px;
+			margin-top: 10px;
+			margin-bottom: -8px;
+			width:960px; 
+			height: 78px;
+		}
+		.A{
+			font-size: 21px;
+			font-weight: bold;
+			color: #545251;
+		}
+		.header>span>a{
+			text-decoration:none;
+			line-height: 80px;
+			float: right;
+			font-size:13px;
+			color: #003399;
+			font-style: normal;
+		}
+		header span{
+			float: left;
+			padding-top: 5px;
+		}
+		.cender{
+			width: 960px;
+			height: 676px;
+		}
+		.centertop{
+			box-sizing: border-box;
+			line-height: 38px;
+			color: #FFFFFF;
+			font-size: 16px;
+			height: 38px;
+			background-color: #6FA1D4;
+		}
+		.centerbottom{
+
+			box-sizing: border-box;
+			width: 960px;
+			height: 639px;
+		}
+		.centerleft{
+			text-align: center;
+			box-sizing: border-box;
+			float: left;
+			width: 644px;
+			height: 639px;
+			background-color:#FFFFFF;
+			border: 1px solid #E0E0E0; 
+		}
+		.centerright{
+			box-sizing: border-box;
+			float: right;
+			width: 316px;
+			height: 639px;
+			border: 1px solid #E0E0E0
+		}
+		.mihao{
+			color: red;
+		}
+		.zc{
+			margin-top: 50px;
+			margin-bottom:32px; 
+			font-size: 0px
+
+		}
+		.zc input{
+			color: #555555;
+			font-size: 15px; 
+			width: 137px;
+			height: 33px;
+			background-color: #F2F4F3;
+		}
+		.zc .moren{
+			background-color: #357DC7;
+			color: #FFFFFF;
+		}
+		.shouji input{
+			margin-left: 22px;
+			width: 245px;
+			height: 28px;
+		}
+		.youxiangmr{
+			padding-left: 5px;
+			font-weight: bold;
+			color: #555555;
+		}
+		.shouji>p{
+			margin-top: 7px;
+			color: #555555;
+			font-size: 13px;
+			margin-left: -140px; 
+		}
+		.tupian input{
+			margin-left: 22px;
+			width: 207px;
+			height: 28px;
+			margin-right: 5px;
+		}
+		.tupian img{
+			margin-bottom: -10px;
+		}
+		.tupian>p{
+			margin-top: 7px;
+			color: #555555;
+			font-size: 13px;
+			margin-left: 120px; 
+		}
+		.tupian>p>span{
+			margin-left: 10px;
+			font-size: 14px;
+			color: #003399;
+			margin-left: 25px;
+		}
+		.mianfei input{
+			width:141px;
+			height: 28px;
+			margin-top: 12px;
+			margin-left: -82px; 
+			font-weight: bolder;
+			line-height: 28px;
+			text-align: center;
+			font-size: 15px;
+			color: #555555;
+		}
+		.duanxi input{
+			margin-top:16px; 
+			margin-left: 22px;
+			width: 335px;
+			height: 28px;
+			margin-right: 5px;
+		}
+		.duanxi>p{
+			margin-top: 7px;
+			color:#555555;
+			font-size: 13px;
+			margin-left: 20px;
+		}
+		.mim input{
+			margin-top:16px; 
+			margin-left: 22px;
+			width: 335px;
+			height: 28px;
+			margin-right: 5px;
+		}
+		.mim{
+			margin-left: 50px;
+		}
+		.mim>p{
+			margin-top: 7px;
+			color:#555555;
+			font-size: 13px;
+			margin-left: -140px;
+		}
+		.queren input{
+			margin-top:16px; 
+			margin-left: 22px;
+			width: 335px;
+			height: 28px;
+		}
+		.queren{
+			margin-left: 10px;
+		}
+		.queren>p{
+			margin-top: 7px;
+			color:#555555;
+			font-size: 13px;
+			margin-left: -160px;
+		}
+		.ty input{
+			margin-left: 280px;
+			margin-top: 20px;
+			font-size: 13px;
+			margin-right: 5px;
+		}
+		.ty{
+			margin-top: 7px;
+			color:#999999;
+			font-size: 13px;
+			margin-left: -160px;
+		}
+		.ty>span{
+			color: #003399;
+		}
+		.sub input{
+			width: 118px;
+			height: 36px;
+			background-color: #58AD44;
+			margin-left: 40px;
+			color: #FFFFF1;
+			font-size: 13px;
+			font-weight: bold;
+			border: 1px solid green;
+			margin-bottom: 38px;
+		}
+		h1{
+			font-size: 22px;
+			color:#5E8EBF;
+			margin-top: 106px;
+			text-align: center; 
+		}
+		h2{
+			margin-top: 6px;
+			font-size: 11px;
+			color:#5E8EBF;
+			text-align: center;
+		}
+		.centerright img{
+			margin-left: 45px;
+			margin-top: 10px;
+		}
+		.centerright input{
+			margin-left: 90px;
+			margin-top: 5px;
+
+		}
+		.centerright span{
+			font-size: 13px;
+			font-weight: bold;
+			color: #999999;
+		}
+		.ty1{
+			margin-top: 2px;
+		}
+		.fooder{
+			text-align: center;
+			margin-top: 15px;
+			color: #999999;
+			font-size: 11px;
+			}
+		</style>
+</head>
+<body>
+<div class="wy">
+	<div class="header">
+		<span>
+		<img src="163.png">&nbsp; 
+		<img src="126.png">&nbsp;
+		<img src="yeah.png">
+		<span class="A">|中国第一大电子邮件服务商</span>
+		</span>
+		<span><a href="#">| 反馈意见</a><a href="#">了解更多</a></span>
+	</div>
+	<div class="center"></div>
+		<span><div class="centertop">&nbsp;&nbsp;欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</div></span>
+		<div class="cenbottom">
+			<div class="centerleft">
+				<div class="zc">
+					<span>
+						<input type="button" value="注册字母邮箱">
+						<input type="button" value="注册手机号码邮箱" class="moren">
+						<input type="button" value="注册VIP邮箱">
+					</span>
+				</div>
+				<div class="shouji">
+					<label for="shouji"><span class="mihao">*</span> 手机号码<input type="number" id="shouji"></label><span class="youxiangmr">@163.com</span>
+					<p>请填写手机号码</p>
+				</div>
+				<div class="tupian">
+					<label for="tupian"><span class="mihao">*</span> 图片验证码<input type="text" id="tupian"></label><img src="网易/QQ截图20161226210355.png">
+					<p>请填写图片中的字符，不区分大小写<span><a herf="#">看不清楚？换张图片</a></span></p>
+				</div>
+				<div class="mianfei">
+					<input type="submit" value="免费获取验证码">
+				</div>
+				<div class="duanxi">
+					<label for="duanxin"><span class="mihao">*</span> 短信验证码<input type="text" id="duanxin"></label>
+					<p>请查收手机短信，并填写短信短信中的验证码</p>
+				</div>
+				<div class="mim">
+					<label for="mima"><span class="mihao">*</span> 密码<input type="password" id="mima" ></label>
+					<p>6~16个字符，区分大小写</p>
+				</div>
+				<div class="queren">
+					<label for="queren"><span class="mihao">*</span> 确认密码<input type="text" id="queren"></label>
+					<p>请再次填写密码</p>
+				</div>
+				<div class="ty">
+					<input type="button"  value="同意">同意“<span>服务条款</span>”和“<span>用户须知</span>”，“<span>隐私权相关政策</span>”
+				<div class="sub">
+				<input type="submit" value="立刻注册">
+				</div>
+				</div>
+			</div>
+			<div class="centerright">
+			<h1>用“邮箱大师”</h1>
+			<h2>更专业高效处理邮件！</h2>
+			<img src="QQ截图20161226210438.png">
+			<p class="ty1"><input type="button"  value="同意"><span>同时管理所有邮箱</span></p>
+			<p><input type="button"  value="同意"><span>随时随地免费收发</span></p>
+			
+
+			</div>
+		</div>
+	</div>
+<div class="fooder">
+	<p>关于网易 关于网易免费邮 邮箱官方博客 客户服务 隐私政策 | 网易公司版权所有&copy; 1997-2016</p>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>轮播图</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		body{
+			background: #DDDDDD;
+		}
+		#div1{
+			width: 1500px;
+			height:800px;
+			overflow:hidden;
+			margin: 50px auto;
+			position: relative;
+			box-shadow: 3px 4px 2px #888;
+		}
+		#div1 li{
+			float: left;
+		}
+		
+		#div1  img{
+			width: 1500px;
+			height:800px;
+		}
+		.ul-2{
+			position: absolute;
+			bottom: 10px;
+			right: 50%;
+			border-radius: 5px;
+			background: rgba(255,255,255,0.3);
+
+		}
+		.ul-2 li{
+			width: 25px;
+			line-height: 30px;
+			text-align: center;
+			float: left;
+			
+
+		}
+		.ul-2 a{
+			text-decoration: none;
+			color:black;
+		}
+		.ul-2 .on{
+			margin-top: 5px;
+			line-height: 20px;
+			background: rgba(0,0,0,0.4);
+			border-radius: 100px;
+		}
+		.entry{
+			width: 450px;
+			height: 500px;
+			background: #fff;
+			position: fixed;
+			top: 7rem;
+			right: 20rem;
+			box-shadow: 2px 3px 1px #ccc;
+
+		}
+		.entry a{
+			font-weight: 100;
+			color:#00BBFF;
+			text-decoration: none;
+			font-family:"serif"; 
+		}
+		.entry a:hover{
+			color:#77DDFF; 
+		}
+		.entry h2{
+			width: 450px;
+			font-weight: normal;
+			margin: 20px auto;
+			text-align: center;
+		}
+		.entry span{
+			display: block;
+			width: 450px;
+			margin: 20px auto;
+			text-align: center;
+		}
+		.entry .Scan{
+			display: block;
+			width: 300px;
+			height: 300px;
+			margin:0px auto 20px;
+		}
+		.entry .entry-bottom{
+			width: 450px;
+			height: 68px;
+			margin:0px auto 20px;
+			background-color: #444;
+			text-align: center;
+
+		}
+		.entry .entry-bottom a{
+			color: #fff;
+			display: inline-block;
+			line-height: 68px;
+		}
+		.entry .entry-bottom a:hover{
+			color: #00BBFF;
+		}
+		.entry .entry-bottom .icon{
+			width: 30px;
+			height: 25px;
+			line-height: 68px;
+			filter: grayscale(90%);
+			margin: 0px 8px 0px 8px;
+			border-radius: 3px;
+		}
+		.entry .entry-bottom .icon:hover{
+			filter: saturate(40%);
+		}
+		.entry .entry-bottom .entry-btn{
+			display: inline-block;
+			border: 1px solid #fff;
+			padding: 3px;
+			border-radius: 3px;
+			line-height: 30px;
+		}
+		
+	</style>
+	<script src="./jquery-2.2.4.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var oDiv1=document.getElementById('div1');
+		var oUl=oDiv1.getElementsByTagName('ul')[0];
+		var aLi=oUl.getElementsByTagName('li');
+		// var speed=2;
+		// alert("hy");
+		// $("#ul_2").click(function(){
+  //  			 $("#div1").slideToggle("slow");
+ 	// 	 });
+
+		oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+		oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+		function move(){
+			if (oUl.offsetLeft<-oUl.offsetWidth/2)
+			{
+				oUl.style.left='0';
+			}
+			if(oUl.offsetLeft>0)
+			{
+				oUl.style.left=-oUl.offsetWidth/2+'px';
+			}
+			oUl.style.left=oUl.offsetLeft+speed+'px';
+		}
+		var timer=setInterval(move,30);
+		oDiv1.onmouseover=function ()
+		{
+			clearInterval(timer);
+		};
+		oDiv1.onmouseout=function ()
+		{
+			timer=setInterval(move,30);
+		}
+	});
+		
+	</script>
+</head>
+<body>
+<div class="ul-1" id="ul_1">
+	<div id="div1">
+		<ul>
+			<li><img id="img" src="./img/1.jpg"></li>
+			<li><img id="img" src="./img/1.jpg"></li>
+			<li><img id="img" src="./img/1.jpg"></li>
+			<li><img id="img" src="./img/1.jpg"></li>
+			<li><img id="img" src="./img/1.jpg"></li>
+		</ul>
+		
+	</div>
+	<ul class="ul-2" id="ul_2">
+		<li class="on"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+	</ul>
+</div>
+<div class="entry">
+	<h2>扫一扫登录</h2>
+	<span>请使用<a href="#">手机百度 APP</a>扫描登录</span>
+	<img class="Scan" src="./img/timg.jpg" alt="">
+	<div class="entry-bottom">
+		<a href="#">账号密码登录</a>
+		<img class="icon" src="./img/logo.jpg" alt="">
+		<img class="icon" src="./img/timg (1).jpg" alt="">
+		<a class="entry-btn" href="#">立即注册</a>
+	</div>
+	
+</div>
+
+</body>
+</html>

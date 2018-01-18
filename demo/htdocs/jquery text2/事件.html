@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件</title>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	//绑定一个或多个事件
+	//$('ul').on('click mouseenter', 'li', function() {
+		//alert($(this).html());
+		
+	//});
+	//解除绑定事件
+	//$('ul').off('mouseenter');
+
+	//触发事件	
+	// $('form').on('click', '#btn', function() {
+	// 	var txtname=$('#txtname').val();
+	// 	if (txtname==="1") {
+	// 		alert('提交成功');
+	// 	}else{
+	// 		$('#txtname').val("").trigger('focus');
+	// 	}
+	// });
+	//解除绑定事件 绑定的时候不能用on，因为冒泡的，所以可以用bind
+	// $('#btn').click(function() {
+	// 	var txtname=$('#txtname').val();
+	// 	if (txtname==="1") {
+	// 		alert('提交成功');
+	// 	}else{
+	// 		$('#txtname').val("").triggerHandler('focus');
+	// 	}
+	// });
+	//鼠标跟随
+	$(document).on('mousemove',function(e) {
+		$('img').css({
+			'position': 'absolute',
+			'top': e.pageY,
+			'left':e.pageX
+		});
+	});
+	
+	
+});
+	
+
+
+
+
+
+
+</script>
+<img src="img/tubiao.gif" alt="">
+<form action="">
+	<label for="txtname">用户名：</label><input type="text" id="txtname">
+	<input type="submit" value="提交" id="btn">
+</form>
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+</ul>
+</body>
+</html>

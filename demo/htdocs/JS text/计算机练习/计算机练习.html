@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算机练习</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.boder{
+			margin: 0 auto;
+			width: 300px;
+			height: 620px;
+			border: 1px solid black;
+			background-color: red;
+		}
+		.header{
+			box-sizing: border-box;
+			width: 100%;
+			height: 120px;
+			border-bottom: 1px solid;
+			text-align: right;
+		}
+		.fooder{
+			width: 100%;
+			height: 90px;
+		}
+		table{
+			text-align: center;
+		}
+		td{
+			
+			margin-top: 50px;
+			width: 73px;
+			font-size: 40px;
+			line-height: 120px;
+			border: 1px solid;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var text;	//显示屏对象
+
+		var shuzi1;	//存放第一个数
+		var shuzi2;	//存放第二个数
+		var jieguo;
+
+		function loadok() 
+		{
+			text = document.getElementById("text");
+		}
+
+		function one0()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 0
+			}
+			else
+			{
+				shuzi2 = 0
+			}
+
+			text.innerHTML = 0
+		}
+		
+		function one1()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 1
+			}
+			else
+			{
+				shuzi2 = 1
+			}
+
+			text.innerHTML = 1
+		}
+
+		function one2()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 2
+			}
+			else
+			{
+				shuzi2 = 2
+			}
+
+			text.innerHTML = 2
+		}
+
+		function one3()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 3
+			}
+			else
+			{
+				shuzi2 = 3
+			}
+			text.innerHTML = 3
+		}
+
+		function one4()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 4
+			}
+			else
+			{
+				shuzi2 = 4
+			}
+
+			text.innerHTML = 4
+		}
+
+		function one5()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 5
+			}
+			else
+			{
+				shuzi2 = 5
+			}
+
+			text.innerHTML = 5
+		}
+
+		function one6()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 6
+			}
+			else
+			{
+				shuzi2 = 6
+			}
+
+			text.innerHTML = 6
+		}
+
+		function one7()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 7
+			}
+			else
+			{
+				shuzi2 = 7
+			}
+
+			text.innerHTML = 7
+		}
+
+		function one8()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 8
+			}
+			else
+			{
+				shuzi2 = 8
+			}
+
+			text.innerHTML = 8
+		}
+		function one9()
+		{
+			if(shuzi1 == null)
+			{
+				shuzi1 = 9
+			}
+			else
+			{
+				shuzi2 = 9
+			}
+
+			text.innerHTML = 9
+		}
+
+
+		function jia() 
+		{
+			jieguo = shuzi1 + shuzi2
+		}
+
+		function jian() 
+		{
+			jieguo = shuzi1 - shuzi2
+		}
+
+		function cheng() 
+		{
+			jieguo = shuzi1 * shuzi2
+		}
+
+		function chu() 
+		{
+			jieguo = shuzi1 / shuzi2
+		}
+
+		function dengyu() 
+		{
+			text.innerHTML = jieguo
+			shuzi1 = null
+			shuzi2 = null
+		}
+
+
+
+	</script>
+</head>
+<body onload="loadok()">
+<div class="boder">
+	<div class="header"><h1 id="text" style="font-size: 100px;"></h1></div>
+	<div class="fooder">
+		<table>
+			<tr>
+				<td onclick="one7()">7</td>
+				<td onclick="one8()">8</td>
+				<td onclick="one9()">9</td>
+				<td onclick="cheng()">&times;</td>
+			</tr>
+			<tr>
+				<td onclick="one4()">4</td>
+				<td onclick="one5()">5</td>
+				<td onclick="one6()">6</td>
+				<td onclick="jian()">_</td>
+			</tr>
+			<tr>
+				<td onclick="one1()">1</td>
+				<td onclick="one2()">2</td>
+				<td onclick="one3()">3</td>
+				<td onclick="jia()">+</td>
+			</tr>
+			<tr>
+				<td onclick="one0()">0</td>
+				<td onclick="dengyu()">=</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

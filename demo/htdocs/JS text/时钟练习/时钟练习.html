@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>时钟练习</title>
+	<script type="text/javascript">
+
+	function toDou(n)
+	{
+		if (n<10)
+		{
+			return '0'+n;
+
+		}
+		else
+		{
+			return ''+n;
+		}
+	}
+	window.onload=function ()
+	{
+		var aImg=document.getElementsByTagName('img');
+		
+		function tick()
+		{
+			var oDate=new Date();
+
+			var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+			for(var i=0;i<aImg.length;i++)
+			{
+				aImg[i].src=''+str[i]+'.png';
+			}
+		}
+		setInterval(tick,1000);
+		tick();
+	};
+	</script>
+</head>
+<body style="background-color: pink;color: white;font-size: 50px;">
+<img src="0.png" style="width: 60px; height: 90px;" />
+<img src="照片/0.png" style="width: 60px; height: 90px;" />
+:
+<img src="0.png" style="width: 60px; height: 90px;" />
+<img src="0.png" style="width: 60px; height: 90px;" />
+:
+<img src="0.png" style="width: 60px; height: 90px;" />
+<img src="0.png" style="width: 60px; height: 90px;" />
+
+
+</body>
+
+</html>

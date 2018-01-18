@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第一章01</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#test{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+
+		}
+
+
+	</style>
+		<script type="text/javascript">
+		function ttt() {
+
+			var wangke = "我是猪"
+			var mengbowen = document.getElementById("test")
+			document.getElementById("test").innerHTML = wangke
+			mengbowen.innerHTML = "嘿嘿"
+			wangke = mengbowen
+			wangke.innerHTML = "哟吼吼"
+			alert(document.getElementById("test").innerHTML)
+		}
+	</script>
+</head>
+<body>
+<div id="test">我是猪</div>
+<input type="button" value="确定" onclick="ttt()">
+</body>
+
+
+</html>

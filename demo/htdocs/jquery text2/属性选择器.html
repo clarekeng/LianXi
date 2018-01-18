@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>属性选择器</title>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	$('a[href]').css('color','red');等于属性
+	$('a[href="www.baidu.com"]').css('color','red');等于属性值
+	$('a[href!="www.baidu.com"]').css('color','red');不等于属性值
+	$('a[href^="www"]').css('color','red');等于属性值www开头的
+	$('a[href$="com"]').css('color','red');等于属性值com结尾的
+	$('a[href*="b"]').css('color','red');等于属性值包含b的
+	$('a[href][title][value]').css('color','red');等于包含多个属性的
+});
+</script>
+<a href="www.baidu.com">1</a>
+<a>2</a>
+</body>
+</html>

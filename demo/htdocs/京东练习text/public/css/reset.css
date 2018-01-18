@@ -1,0 +1,20 @@
+/*修改默认样式*/
+html {color:#000;background:#FFF;}
+body, h1, h2, h3, h4, h5, h6, p, form, fieldset, table, th, td, img, div, dl, dt, dd, ul, ol, li, pre, button, input{
+    margin: 0;
+    padding: 0;}
+body{font:12px/1.5 "Arial","宋体";background-color: #fff;}
+a{text-decoration:none;color: #2d374b;}
+a:hover {text-decoration: underline;color: #c00;}
+input,select,textarea,img,fieldset{outline:none;border: none;}
+table {border-collapse:collapse;border-spacing:0;}
+iframe{display:block;border:none;}
+ul,ol{list-style:none;}
+textarea{resize:none;}
+
+/*公共样式样式*/
+.hide{display:none;}
+.block{display:block;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix{clear:both;}

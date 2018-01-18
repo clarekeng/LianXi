@@ -1,0 +1,3 @@
+User-agent: *   注释：都可以访问
+
+Disallow: /admin/   注释：除了admin文件夹不可以访问
